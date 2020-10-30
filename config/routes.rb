@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   resources :homes, only:[:top]
   resources :customers, only:[:index, :edit, :show, :update]
 end
-  devise_for :users
   root "admins/homes#top"
+  devise_for :customers
+  root 'homes#top'
+  get '/about'=> 'homes#about'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
