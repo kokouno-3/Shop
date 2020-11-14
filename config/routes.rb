@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+    
   get 'customers/index'
   get 'customers/show'
   get 'customers/edit'
@@ -9,6 +10,7 @@ Rails.application.routes.draw do
   namespace :admins do
   resources :homes, only:[:top]
   resources :customers, only:[:index, :edit, :show, :update]
+  resources :items, only:[:index, :new, :creste, :show, :edit, :update]
 end
   root "admins/homes#top"
   devise_for :customers
