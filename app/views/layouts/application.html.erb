@@ -18,40 +18,58 @@
       <nav>
         <ul class="nav navbar-nav navbar-right">
           <% if admin_signed_in? %>
+          
+          
+          
+          
+          
             <li>
+              
+              
               <%= link_to "商品一覧", "#", class: "glyphicon glyphicon-home home" %>
+            
+    </li>
+            <li>
+              
+        <%= link_to "会員一覧", admins_customers_path, class: "glyphicon glyphicon-user users" %>
             </li>
             <li>
-              <%= link_to "会員一覧", admins_customers_path, class: "glyphicon glyphicon-user users" %>
-            </li>
-            <li>
+              
+              
+              
+              
               <%= link_to "注文履歴一覧", "#", class: "glyphicon glyphicon-book books" %>
-            </li>
-            <li>
-              <%= link_to "ジャンル一覧", "#", class: "glyphicon glyphicon-log-out logout", method: :delete %>
-            </li>
-            <li>
-              <%= link_to "ログアウト", destroy_admin_session_path, class: "glyphicon glyphicon-log-out logout", method: :delete %>
-            </li>
-          <% else %>
-            <li class="header-right">
+                                 </li>
+        <li>
+          
+          
+          
+                          <%= link_to "ジャンル一覧", "#", class: "glyphicon glyphicon-log-out logout", method: :delete %>
+      </li>
+            <li>     
+<%= link_to "ログアウト", destroy_admin_session_path, class: "glyphicon glyphicon-log-out logout", method: :delete %>
+                 </li>
+                     <% else %>
+  <li class="header-right">
+          
+          
             <%= link_to "ログイン", new_admin_session_path %>
+                    </li>
+            <li class="header-right">
+    <%= link_to "新規登録", new_admin_registration_path %>
+                       </li>
+         <li class="header-right">
+               <%= link_to "商品一覧", "#" %>
           </li>
-          <li class="header-right">
-            <%= link_to "新規登録", new_admin_registration_path %>
-          </li>
-          <li class="header-right">
-            <%= link_to "商品一覧", "#" %>
-          </li>
-          <li class="header-right">
-            <%= link_to "About", "#" %>
-          </li>
+             <li class="header-right">
+             <%= link_to "About", "#" %>
+                      </li>
 
-          <% end %>
+    <% end %>
         </ul>
-      </nav>
+            </nav>
     </div>
-</header>
+           </header>
     <br />
     <br />
     <br />
